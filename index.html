@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Passwords with initials: strong, easy to type & remember">
+		<meta name="author" content="Georg Jähnig">
+
+		<title>Initials-ware | Passwords with initials</title>
+
+		<!-- Bootstrap core CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+		<!-- Custom styles for this template -->
+		<link href="css/style.css" rel="stylesheet">
+
+		<script src="js/initials.js"></script>
+		<script src="js/index.js"></script>
+	</head>
+
+	<body onload="generate();">
+
+		<div class="container">
+
+			<a href="https://github.com/georgjaehnig/initials-ware"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 999;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+
+			<div class="row mt-5">
+
+				<div class="col-sm-6">
+					<h1>Initials-ware</h1>
+					<p class="lead">
+					Remember your password with initials of people you know.
+					</p>
+					<p>Passwords should be <strong>strong</strong>. An entropy of 64 bits is given by a <a target="_blank" href="https://en.wikipedia.org/wiki/Password_strength#Random_passwords">14-letter all-lowercase password.</a></p>
+					<p>Passwords should be <strong>easy to remember</strong> (if you need to type them yourself). By giving you 7 known* people having the initials of your password, you get an inspiration for your mnemonic. <small>However, feel free to use other people, e.g. from your contacts, if you can remember them better.</small></p>
+
+					<p><small>* Don't know these people? Help me to find better ones.</small></p>
+
+
+					<button type="button" class="btn btn-primary mb-3" onclick="generate();">Generate new random password</button>
+
+				</div>
+				<div class="col-sm-6">
+
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<div class="input-group-text">Password</div>
+						</div>
+						<input type="text" class="form-control" id="password" placeholder="">
+					</div>
+
+					<table id="initials" class="table mt-3">
+					</table>
+
+				</div>
+			</div>
+		</div><!-- /.container -->
+
+	</body>
+</html>
